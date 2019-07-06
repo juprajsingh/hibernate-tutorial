@@ -39,6 +39,16 @@ public class QueryStudentDemo {
 				System.out.println("\n\nStudents who have last name of Doe");
 				displayStudents(theStudents);
 				
+				// query students: lastName = 'Doe' OR firstName = 'Daffy'
+				theStudents =
+						session.createQuery("from Student s where"
+									+ " s.lastName='Doe' OR s.firstName ='Daffy'").getResultList();
+				
+				System.out.println("\n\nStudents who have the last name of Doe OR first name Daffy");
+				displayStudents(theStudents);
+				
+				
+				
 				// commit transaction 
 				session.getTransaction().commit();
 				
