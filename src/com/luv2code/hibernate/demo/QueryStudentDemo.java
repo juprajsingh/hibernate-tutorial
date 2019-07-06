@@ -47,9 +47,9 @@ public class QueryStudentDemo {
 				System.out.println("\n\nStudents who have the last name of Doe OR first name Daffy");
 				displayStudents(theStudents);
 				
-				// query students where email LIKE '%luv2code.com'
+				// query students where email LIKE '%gmail.com'
 				theStudents = session.createQuery("from Student s where "
-						+ " s.email LIKE '%luv2code.com'").getResultList();
+						+ " s.email LIKE '%gmail.com'").getResultList();
 						
 				System.out.println("\n\nStudents who have email ending with luv2Code.com");
 				displayStudents(theStudents);
